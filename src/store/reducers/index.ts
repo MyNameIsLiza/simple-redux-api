@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import clientsReducer from "./clients";
 
-const reducer = combineReducers({ clientsReducer: clientsReducer });
+//const reducer = combineReducers({ clientsReducer: clientsReducer });
 
-export default reducer;
+export default clientsReducer;

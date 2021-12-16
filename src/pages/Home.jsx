@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import get from '../services/api/get';
 import { getClientsFailure, getClientsStart, getClientsSuccess } from '../store/actions/clients';
 
-function Home(): JSX.Element {
+function Home() {
     const dispatch = useDispatch();
     const [clients, setClients] = useState([]);
     useEffect(() => {
@@ -19,7 +19,6 @@ function Home(): JSX.Element {
     }, []);
     return (
         <div className="Home">
-            Hello
             <table>
                 <thead>
                     <tr>
@@ -31,7 +30,7 @@ function Home(): JSX.Element {
                         <th>telephone</th>
                     </tr>
                 </thead>
-                <tbody>{clients.map((client) => <tr>
+                <tbody>{clients.map((client) => <tr key={client.id}>
                     <td>{client.id}</td>
                     <td>{client.surname}</td>
                     <td>{client.name}</td>
