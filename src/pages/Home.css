@@ -1,0 +1,35 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#fetch_button {
+    padding: 10px 15px;
+    background-color: darkmagenta;
+    color: white;
+    font-size: 15px;
+    border: 3px solid blueviolet;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+table {
+    margin-top: 30px;
+}
+
+table,
+th,
+td {
+    border: 1px solid blueviolet;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+th {
+    padding: 15px;
+}

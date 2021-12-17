@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import get from '../services/api/get';
 import { getClientsFailure, getClientsStart, getClientsSuccess } from '../store/actions/clients';
+import './Home.css';
 
 function Home() {
     const dispatch = useDispatch();
     const [clients, setClients] = useState([]);
-    useEffect(() => {
+    const getClients = useCallback(() => {
         dispatch(getClientsStart());
         get().then((data) => {
             setClients(data.result);
@@ -19,7 +20,9 @@ function Home() {
     }, []);
     return (
         <div className="Home">
-            <table>
+            <button id='fetch_button' onClick={getClients}>Fetch all clients</button>
+            {
+            !!clients.length &&<table>
                 <thead>
                     <tr>
                         <th>id</th>
@@ -40,6 +43,7 @@ function Home() {
                 </tr>)}
                 </tbody>
             </table>
+            }
         </div>
     );
 }
