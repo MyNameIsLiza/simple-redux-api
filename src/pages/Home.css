@@ -5,6 +5,21 @@
     padding: 30px;
 }
 
+.flex{
+    display: flex;
+}
+
+.form {
+    width: fit-content;
+    border: #ecdcfb 1px solid;
+    padding: 1rem;
+    border-radius: 10px;
+    display: grid;
+    gap: 5px;
+    position: sticky;
+    top: 20px;
+}
+
 #fetch_button {
     padding: 10px 15px;
     background-color: darkmagenta;
